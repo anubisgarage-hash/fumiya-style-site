@@ -9,8 +9,10 @@ const SESSION_DAYS = 30;
 function adminPassword() {
   let v = "";
   try { v = globalThis.Netlify?.env?.get?.("ADMIN_PASSWORD") || ""; } catch {}
-  return v || process.env.ADMIN_PASSWORD || "";
+  return norm(v || process.env.ADMIN_PASSWORD || "");
 }
+// Full-width characters (Japanese keyboard) and stray spaces should not cause a mismatch.
+function norm(x) { return String(x || "").normalize("NFKC").trim(); }
 export function passwordState() {
   const pw = adminPassword();
   return !pw ? "missing" : pw.length < 8 ? "short" : "ok";
@@ -24,7 +26,7 @@ export function passwordConfigured() { return !!signingKey(); }
 
 export function checkPassword(input) {
   const pw = adminPassword();
-  const a = crypto.createHash("sha256").update(String(input || "")).digest();
+  const a = crypto.createHash("sha256").update(norm(input)).digest();
   const b = crypto.createHash("sha256").update(pw).digest();
   return pw.length >= 8 && crypto.timingSafeEqual(a, b);
 }

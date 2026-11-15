@@ -88,7 +88,7 @@
     app.innerHTML = `<div class="wrap" style="padding-top:56px;max-width:420px">
 <p class="muted small" style="letter-spacing:.3em">FUMIYA STYLE</p><h1 style="margin:4px 0 20px;font-size:22px">参考実例の管理</h1>
 ${expired ? '<p class="notice">ログインの有効期限が切れました。もう一度ログインしてください。編集中の内容はこの端末に控えてあります。</p>' : ""}
-<form id="lf"><label class="f" for="pw">パスワード</label><input class="in" id="pw" type="password" autocomplete="current-password" required>
+<form id="lf"><label class="f" for="pw">パスワード</label><input class="in" id="pw" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false" required>
 <p class="err" id="lerr" role="alert"></p><button class="btn primary block" id="lb" style="margin-top:12px">ログイン</button></form></div>`;
     $("#lf").addEventListener("submit", async (e) => {
       e.preventDefault();
