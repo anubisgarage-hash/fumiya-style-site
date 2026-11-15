@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>佐野史弥（さの ふみや）｜FUMIYA STYLE</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&amp;family=Shippori+Mincho:wght@500;600&amp;family=Noto+Sans+JP:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0B0B0C}
+a{color:#C9A96E}a:hover{color:#E2C994}
+a:focus-visible{outline:2px solid #C9A96E;outline-offset:3px}
+.fs-mlink{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-height:56px;padding:14px 0;border-bottom:1px solid #2A2722;color:#EDE8DF;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:.14em}
+.fs-mlink small{font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.1em;color:#A39E95}
+.fs-msub{min-height:44px;display:flex;align-items:center;color:#C9A96E;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.2em}
+</style>
+</helmet>
+<div style="background: #0B0B0C; color: #EDE8DF; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; line-height: 1.9; letter-spacing: 0.04em; min-height: 100vh">
+
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(11,11,12,0.94); border-bottom: 1px solid #23211D">
+<div style="max-width: 1200px; margin: 0 auto; padding: 8px 12px 8px 20px; display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<a href="Main.dc.html" style="display: flex; flex-direction: column; gap: 4px; text-decoration: none">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.2; letter-spacing: 0.2em; white-space: nowrap; color: #D9BD84">FUMIYA STYLE</span>
+<span style="font-size: 8px; line-height: 1.4; letter-spacing: 0.22em; white-space: nowrap; color: #D6D1C8">PERSONAL BRAND &amp; BUSINESS</span>
+</a>
+<div style="display: flex; align-items: center; flex: none">
+<a href="https://www.instagram.com/fumiya.style/" target="_blank" rel="noopener" aria-label="Instagram（新しいタブで開く）" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #D9BD84">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"></circle></svg>
+</a>
+<a href="https://www.tiktok.com/@fumiya.style" target="_blank" rel="noopener" aria-label="TikTok（新しいタブで開く）" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #D9BD84">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"></path></svg>
+</a>
+<span aria-hidden="true" style="width: 1px; height: 28px; margin: 0 4px; background: #6A5C40"></span>
+<button type="button" id="fs-menu-open" aria-label="メニューを開く" onClick="{{ openMenu }}" style="width: 44px; height: 44px; padding: 0; background: transparent; border: 0; display: flex; align-items: center; justify-content: center; color: #D9BD84; cursor: pointer">
+<svg width="28" height="20" viewBox="0 0 28 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="0" y1="1" x2="28" y2="1"></line><line x1="0" y1="10" x2="28" y2="10"></line><line x1="0" y1="19" x2="28" y2="19"></line></svg>
+</button>
+</div>
+</div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div id="fs-menu" role="dialog" aria-modal="true" aria-label="メニュー" style="position: fixed; inset: 0; z-index: 50; background: #0B0B0C; overflow-y: auto">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 12px 0 20px; display: flex; align-items: flex-start; justify-content: space-between">
+<span style="display: flex; flex-direction: column; gap: 4px; padding-top: 6px">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.2; letter-spacing: 0.2em; white-space: nowrap; color: #D9BD84">FUMIYA STYLE</span>
+<span style="font-size: 8px; line-height: 1.4; letter-spacing: 0.22em; white-space: nowrap; color: #D6D1C8">PERSONAL BRAND &amp; BUSINESS</span>
+</span>
+<button type="button" id="fs-menu-close" aria-label="メニューを閉じる" onClick="{{ closeMenu }}" style="width: 44px; height: 44px; padding: 0; background: transparent; border: 0; display: flex; align-items: center; justify-content: center; color: #D9BD84; cursor: pointer">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="2" y1="2" x2="20" y2="20"></line><line x1="20" y1="2" x2="2" y2="20"></line></svg>
+</button>
+</div>
+<nav aria-label="サイトメニュー" style="max-width: 640px; margin: 0 auto; padding: 32px 28px 56px; display: flex; flex-direction: column">
+<a href="Main.dc.html#philosophy" class="fs-mlink"><span>PHILOSOPHY</span><small>経営哲学</small></a>
+<a href="Main.dc.html#about" class="fs-mlink"><span>ABOUT</span><small>佐野史弥について</small></a>
+<a href="Profile.dc.html" class="fs-mlink"><span>PROFILE</span><small>佐野史弥（さの ふみや）</small></a>
+<a href="Main.dc.html#approach" class="fs-mlink"><span>HOW I WORK</span><small>向き合い方</small></a>
+<a href="Main.dc.html#business" class="fs-mlink"><span>BUSINESS</span><small>事業領域</small></a>
+<div style="display: flex; flex-direction: column; padding: 4px 0 12px 16px; border-bottom: 1px solid #2A2722">
+<a href="https://anubis-nagoya.com/" target="_blank" rel="noopener" class="fs-msub">ANUBIS NAGOYA ↗</a>
+<a href="Branding.dc.html" class="fs-msub">BRANDING</a>
+<a href="Global.dc.html" class="fs-msub">GLOBAL BUSINESS</a>
+<a href="Matching.dc.html" class="fs-msub">BUSINESS MATCHING</a>
+<a href="System.dc.html" class="fs-msub">SYSTEM DEVELOPMENT</a>
+</div>
+<a href="People.dc.html" class="fs-mlink"><span>MY PEOPLE.</span><small>信頼する仲間たち</small></a>
+<a href="Main.dc.html#connect" class="fs-mlink"><span>CONNECT</span><small>SNS</small></a>
+<a href="Main.dc.html#contact" style="margin-top: 32px; min-height: 56px; display: flex; align-items: center; justify-content: center; background: #C9A96E; color: #0B0B0C; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; text-decoration: none">事業について相談する</a>
+</nav>
+</div>
+</sc-if>
+
+<section aria-labelledby="profile-title" style="padding: 72px 24px 56px">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end">
+<div style="flex: 1 1 300px; max-width: 420px; aspect-ratio: 4 / 5; overflow: hidden; background: #141414">
+<img src="/_blob/59af36edc787f40654fa1e72d2088e65" alt="佐野史弥のポートレート" width="941" height="1672" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%">
+</div>
+<div style="flex: 999 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">PROFILE</p>
+<h1 id="profile-title" style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6.4vw, 38px); line-height: 1.5; letter-spacing: 0.06em; color: #F3EEE5">佐野史弥（さの ふみや）｜FUMIYA STYLE</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.9; color: #D9BD84">RAF INDUSTRIES 株式会社 代表取締役<br>ANUBIS NAGOYA 代表</p>
+<p style="margin: 0; font-size: 16px; line-height: 2; color: #D6D1C8">トヨタディーラーで、お客様と車の現場を知る。トヨタ自動車の開発部門で、ものづくりの精度と仕組みを学ぶ。独立後は名古屋で自動車事業 ANUBIS NAGOYA を営みながら、製造業をはじめとする企業のブランディング・広報支援へと活動を広げている。</p>
+</div>
+</div>
+</section>
+
+<section style="padding: 72px 24px; background: #111112; border-top: 1px solid #23211D">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">ROLES</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(21px, 5.6vw, 28px); letter-spacing: 0.08em">いま担っていること</h2>
+<div style="display: flex; flex-direction: column">
+<div style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 19px; color: #F3EEE5">RAF INDUSTRIES 株式会社　代表取締役</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.9; color: #D6D1C8">自動車事業 ANUBIS NAGOYA の運営会社です。</p>
+</div>
+<div style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 19px; color: #F3EEE5">ANUBIS NAGOYA　代表</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.9; color: #D6D1C8">「社長のための車屋さん」として、輸入車の購入・売却、整備・カスタム、法人車両管理、高級車レンタカーまで、車の相談を一つの窓口で受けています。ECUチューニングとバブリングは自社で施工しています。</p>
+<a href="https://anubis-nagoya.com/information/" target="_blank" rel="noopener" style="min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 15px">ANUBIS NAGOYAの会社概要を見る ↗</a>
+</div>
+<div style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 19px; color: #F3EEE5">FUMIYA STYLE　企業ブランディング・広報支援</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.9; color: #D6D1C8">製造業をはじめとする企業の課題を聞き、誰に何を伝えるかを整理。ホームページとSNSの役割を構造図にまとめ、協力会社とも連携しながら制作・運用、公開後の改善まで伴走しています。</p>
+<a href="Branding.dc.html" style="min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 15px">BRANDINGの支援内容を見る →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section style="padding: 72px 24px; border-top: 1px solid #23211D">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">CAREER</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(21px, 5.6vw, 28px); letter-spacing: 0.08em">経歴と資格</h2>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-left: 1px solid #3A3427">
+<li style="padding: 0 0 22px 20px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; color: #F3EEE5">トヨタディーラー</span><span style="font-size: 14px; color: #A39E95">販売・整備の現場で、お客様と車に向き合う</span></li>
+<li style="padding: 0 0 22px 20px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; color: #F3EEE5">トヨタ自動車 開発部門</span><span style="font-size: 14px; color: #A39E95">開発技術者として従事</span></li>
+<li style="padding: 0 0 0 20px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px; color: #F3EEE5">独立</span><span style="font-size: 14px; color: #A39E95">名古屋で ANUBIS NAGOYA（旧 Anubis Garage）を開業。現在は RAF INDUSTRIES 株式会社が運営</span></li>
+</ol>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 6px 14px; border: 1px solid #4A4232; font-size: 13px; color: #C9A96E">国家整備士（ガソリン・ジーゼル）</span>
+<span style="padding: 6px 14px; border: 1px solid #4A4232; font-size: 13px; color: #C9A96E">国家車体整備士</span>
+<span style="padding: 6px 14px; border: 1px solid #4A4232; font-size: 13px; color: #C9A96E">トヨタボデー検定1級</span>
+</div>
+</div>
+</section>
+
+<section style="padding: 72px 24px; background: #111112; border-top: 1px solid #23211D">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">SNS</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(21px, 5.6vw, 28px); letter-spacing: 0.08em">本人の発信</h2>
+<p style="margin: 0; font-size: 16px; line-height: 2; color: #D6D1C8">TikTokでは『バブリングニキ』の名で、本人が自社施工の様子と実車の排気音を発信しています。</p>
+<a href="https://www.tiktok.com/@fumiya.style/video/7351743754518170897" target="_blank" rel="noopener" style="min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 15px">動画を見る：Audi Q7 のバブリングとECUチューニング（TikTok）↗</a>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px">
+<a href="https://www.tiktok.com/@fumiya.style" target="_blank" rel="noopener" style="border: 1px solid #3A3427; padding: 20px; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #EDE8DF"><span style="font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.4em; color: #C9A96E">TIKTOK</span><span style="font-size: 17px">佐野史弥のTikTok（@fumiya.style）↗</span><span style="font-size: 14px; color: #A39E95">施工の様子、実車の排気音、仕事と日常</span></a>
+<a href="https://www.instagram.com/fumiya.style/" target="_blank" rel="noopener" style="border: 1px solid #3A3427; padding: 20px; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #EDE8DF"><span style="font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.4em; color: #C9A96E">INSTAGRAM</span><span style="font-size: 17px">佐野史弥のInstagram（@fumiya.style）↗</span><span style="font-size: 14px; color: #A39E95">仕事の実績、企業支援、ライフスタイル</span></a>
+</div>
+</div>
+</section>
+
+<section style="padding: 88px 24px 104px; border-top: 1px solid #23211D">
+<div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.6vw, 26px); line-height: 1.8; letter-spacing: 0.1em">車のことも、会社の発信のことも。<br>まずは話を聞かせてください。</p>
+<a href="Main.dc.html#contact" style="min-height: 56px; padding: 0 32px; display: flex; align-items: center; background: #C9A96E; color: #0B0B0C; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; text-decoration: none">相談する</a>
+</div>
+</section>
+
+<footer style="padding: 48px 24px 64px; border-top: 1px solid #23211D">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.32em">FUMIYA STYLE</p>
+<p style="margin: 0; font-size: 12px; color: #6E6A63">© FUMIYA STYLE</p>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":4200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menuOpen: false };
+  }
+  renderVals() {
+    var self = this;
+    return {
+      menuOpen: this.state.menuOpen,
+      openMenu: function () { self.setState({ menuOpen: true }); },
+      closeMenu: function () { self.setState({ menuOpen: false }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
