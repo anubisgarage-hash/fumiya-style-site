@@ -1,0 +1,15 @@
+{
+  "name": "fumiya-style-site",
+  "private": true,
+  "type": "module",
+  "description": "FUMIYA STYLE official site: static pages + works (参考実例) served by Netlify Functions and stored in Netlify Blobs",
+  "scripts": {
+    "build:static": "python3 tools/build.py design public https://fumiya-style.com",
+    "dev": "netlify dev",
+    "test": "node --test --test-concurrency=1 tests/api.test.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0",
+    "@netlify/functions": "^3.0.0"
+  }
+}
