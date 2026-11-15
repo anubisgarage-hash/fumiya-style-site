@@ -6,7 +6,7 @@ a{color:var(--gold2)}
 button,input,select,textarea{font:inherit;color:inherit}
 .center{text-align:center}.muted{color:var(--muted)}.small{font-size:13px}
 .wrap{max-width:720px;margin:0 auto;padding:0 16px}
-.top{position:sticky;top:0;z-index:20;background:rgba(11,11,12,.96);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top{position:sticky;top:0;z-index:20;background:#0B0B0C;border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
 .top .wrap{display:flex;align-items:center;gap:8px;min-height:56px}
 .top h1{flex:1;margin:0;font-size:16px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .status{font-size:12px;padding:3px 8px;border-radius:999px;white-space:nowrap}

@@ -96,7 +96,7 @@ const WORKS_CSS = `
 .wk-ba-box img{width:100%;height:100%;object-fit:contain}
 .wk-diagram-tools{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
 .wk-btn{min-height:44px;padding:0 16px;display:inline-flex;align-items:center;gap:8px;border:1px solid #C9A96E;background:transparent;color:#C9A96E;font-size:14px;font-family:inherit;text-decoration:none;cursor:pointer}
-.wk-cta{display:flex;justify-content:center;align-items:center;min-height:56px;padding:0 24px;background:#C9A96E;color:#0B0B0C!important;font-size:16px;font-weight:500;letter-spacing:.1em;text-decoration:none;text-align:center}
+.wk-cta{display:flex;justify-content:center;align-items:center;min-height:56px;width:100%;max-width:440px;padding:10px 16px;background:#C9A96E;color:#0B0B0C!important;font-size:15px;font-weight:500;letter-spacing:.04em;line-height:1.5;text-decoration:none;text-align:center}
 .wk-roles dt{font-size:13px;color:#8F8A82;margin:12px 0 6px}
 .wk-roles dd{margin:0;color:#D6D1C8}
 .wk-grid{display:grid;grid-template-columns:1fr;gap:16px}

@@ -62,9 +62,18 @@
     }
     route();
   });
-  // Hide the bottom buttons while the keyboard is open so they never cover the text.
-  document.addEventListener("focusin", (e) => { if (e.target.matches("input:not([type=checkbox]):not([type=file]),textarea,select")) document.body.classList.add("typing"); });
-  document.addEventListener("focusout", () => setTimeout(() => { const a = document.activeElement; if (!a || !a.matches("input:not([type=checkbox]):not([type=file]),textarea,select")) document.body.classList.remove("typing"); }, 120));
+  // Hide the bottom buttons only while the on-screen keyboard is actually open,
+  // so they never cover the text being typed (iPhone shrinks the visual viewport).
+  const FIELD = "input:not([type=checkbox]):not([type=file]),textarea";
+  function keyboardCheck() {
+    const vv = window.visualViewport;
+    const kbOpen = !!vv && window.innerHeight - vv.height > 150;
+    const a = document.activeElement;
+    document.body.classList.toggle("typing", kbOpen && !!a && a.matches(FIELD));
+  }
+  window.visualViewport && window.visualViewport.addEventListener("resize", keyboardCheck);
+  document.addEventListener("focusin", () => setTimeout(keyboardCheck, 300));
+  document.addEventListener("focusout", () => setTimeout(keyboardCheck, 150));
 
   // ---------- boot / login ----------
   async function boot() {
