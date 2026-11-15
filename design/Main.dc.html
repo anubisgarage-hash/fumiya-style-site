@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>FUMIYA STYLE | 佐野史弥</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&amp;family=Shippori+Mincho:wght@500;600&amp;family=Noto+Sans+JP:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0B0B0C}
+a{color:#C9A96E}a:hover{color:#E2C994}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #C9A96E;outline-offset:3px}
+input::placeholder,textarea::placeholder{color:#6E6A63}
+@keyframes fsFade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.fs-fade{animation:fsFade 1.4s ease-out both}
+@media (prefers-reduced-motion: reduce){.fs-fade{animation:none}}
+.fs-mlink{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-height:56px;padding:14px 0;border-bottom:1px solid #2A2722;color:#EDE8DF;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:.14em}
+.fs-mlink small{font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.1em;color:#A39E95}
+.fs-msub{min-height:44px;display:flex;align-items:center;color:#C9A96E;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.2em}
+@media (min-width: 900px){.fs-hero-img{left:auto!important;right:0!important;width:62%!important;object-position:50% 24%!important}.fs-hero-fade{background:linear-gradient(to right,#0B0B0C 40%,rgba(11,11,12,.7) 50%,rgba(11,11,12,0) 68%),linear-gradient(to bottom,rgba(11,11,12,.35) 0%,rgba(11,11,12,0) 18%,rgba(11,11,12,0) 70%,#0B0B0C 100%)!important}}
+
+</style>
+</helmet>
+<div style="background: #0B0B0C; color: #EDE8DF; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; line-height: 1.9; letter-spacing: 0.04em; min-height: 100vh">
+
+<div style="position: sticky; top: 0; z-index: 20; height: 0">
+<header style="position: absolute; top: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(11,11,12,0.82), rgba(11,11,12,0))">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 12px 28px 20px; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px">
+<a href="#top" style="display: flex; flex-direction: column; gap: 4px; padding-top: 6px; text-decoration: none">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.2; letter-spacing: 0.2em; white-space: nowrap; color: #D9BD84">FUMIYA STYLE</span>
+<span style="font-size: 8px; line-height: 1.4; letter-spacing: 0.22em; white-space: nowrap; color: #D6D1C8">PERSONAL BRAND &amp; BUSINESS</span>
+</a>
+<div style="display: flex; align-items: center; flex: none">
+<a href="https://www.instagram.com/fumiya.style/" target="_blank" rel="noopener" aria-label="Instagram（新しいタブで開く）" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #D9BD84">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"></circle></svg>
+</a>
+<a href="https://www.tiktok.com/@fumiya.style" target="_blank" rel="noopener" aria-label="TikTok（新しいタブで開く）" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #D9BD84">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"></path></svg>
+</a>
+<span aria-hidden="true" style="width: 1px; height: 28px; margin: 0 4px; background: #6A5C40"></span>
+<button type="button" id="fs-menu-open" aria-label="メニューを開く" onClick="{{ openMenu }}" style="width: 44px; height: 44px; padding: 0; background: transparent; border: 0; display: flex; align-items: center; justify-content: center; color: #D9BD84; cursor: pointer">
+<svg width="28" height="20" viewBox="0 0 28 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="0" y1="1" x2="28" y2="1"></line><line x1="0" y1="10" x2="28" y2="10"></line><line x1="0" y1="19" x2="28" y2="19"></line></svg>
+</button>
+</div>
+</div>
+</header>
+</div>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div id="fs-menu" role="dialog" aria-modal="true" aria-label="メニュー" style="position: fixed; inset: 0; z-index: 50; background: #0B0B0C; overflow-y: auto">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 12px 0 20px; display: flex; align-items: flex-start; justify-content: space-between">
+<span style="display: flex; flex-direction: column; gap: 4px; padding-top: 6px">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.2; letter-spacing: 0.2em; white-space: nowrap; color: #D9BD84">FUMIYA STYLE</span>
+<span style="font-size: 8px; line-height: 1.4; letter-spacing: 0.22em; white-space: nowrap; color: #D6D1C8">PERSONAL BRAND &amp; BUSINESS</span>
+</span>
+<button type="button" id="fs-menu-close" aria-label="メニューを閉じる" onClick="{{ closeMenu }}" style="width: 44px; height: 44px; padding: 0; background: transparent; border: 0; display: flex; align-items: center; justify-content: center; color: #D9BD84; cursor: pointer">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="2" y1="2" x2="20" y2="20"></line><line x1="20" y1="2" x2="2" y2="20"></line></svg>
+</button>
+</div>
+<nav aria-label="サイトメニュー" style="max-width: 640px; margin: 0 auto; padding: 32px 28px 56px; display: flex; flex-direction: column">
+<a href="#philosophy" onClick="{{ closeMenu }}" class="fs-mlink"><span>PHILOSOPHY</span><small>経営哲学</small></a>
+<a href="#about" onClick="{{ closeMenu }}" class="fs-mlink"><span>ABOUT</span><small>佐野史弥について</small></a>
+<a href="#approach" onClick="{{ closeMenu }}" class="fs-mlink"><span>HOW I WORK</span><small>向き合い方</small></a>
+<a href="#business" onClick="{{ closeMenu }}" class="fs-mlink"><span>BUSINESS</span><small>事業領域</small></a>
+<div style="display: flex; flex-direction: column; padding: 4px 0 12px 16px; border-bottom: 1px solid #2A2722">
+<a href="https://anubis-nagoya.com/" target="_blank" rel="noopener" class="fs-msub">ANUBIS GARAGE ↗</a>
+<a href="Branding.dc.html" class="fs-msub">BRANDING</a>
+<a href="Global.dc.html" class="fs-msub">GLOBAL BUSINESS</a>
+<a href="Matching.dc.html" class="fs-msub">BUSINESS MATCHING</a>
+<a href="System.dc.html" class="fs-msub">SYSTEM DEVELOPMENT</a>
+</div>
+<a href="People.dc.html" class="fs-mlink"><span>MY PEOPLE.</span><small>信頼する仲間たち</small></a>
+<a href="#connect" onClick="{{ closeMenu }}" class="fs-mlink"><span>CONNECT</span><small>SNS</small></a>
+<a href="#contact" onClick="{{ closeMenu }}" style="margin-top: 32px; min-height: 56px; display: flex; align-items: center; justify-content: center; background: #C9A96E; color: #0B0B0C; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; text-decoration: none">事業について相談する</a>
+</nav>
+</div>
+</sc-if>
+
+<section id="top" aria-label="ファーストビュー" style="position: relative; height: 100vh; min-height: 600px; max-height: 1000px; overflow: hidden; background: #0B0B0C">
+<img class="fs-hero-img" src="/_blob/59af36edc787f40654fa1e72d2088e65" alt="FUMIYA STYLE 代表 佐野史弥" fetchpriority="high" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%">
+<div class="fs-hero-fade" aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,11,12,0.3) 0%, rgba(11,11,12,0) 16%, rgba(11,11,12,0) 40%, rgba(11,11,12,0.7) 68%, #0B0B0C 100%)"></div>
+<div class="fs-fade" style="position: absolute; left: 0; right: 0; bottom: 132px; max-width: 1200px; margin: 0 auto; padding: 0 28px; display: flex; flex-direction: column; gap: 12px">
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(64px, 18vw, 136px); line-height: 0.92; letter-spacing: 0.02em; color: #D9BD84; background: linear-gradient(180deg, #F6E7C1 0%, #DCC089 45%, #A88545 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent">FUMIYA<br>STYLE</h1>
+<p style="margin: 14px 0 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(21px, 6vw, 28px); line-height: 1.3; letter-spacing: 0.03em; color: #F3EEE5">Your Vision. Our Commitment.</p>
+<p style="margin: 0; font-size: 15px; letter-spacing: 0.1em; color: #D6D1C8">あなたの描く未来に、私たちの覚悟を。</p>
+</div>
+<a href="#philosophy" aria-label="下へスクロール" style="position: absolute; left: max(28px, calc((100% - 1200px) / 2 + 28px)); bottom: 16px; width: 64px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: #D6D1C8">
+<span style="width: 1px; height: 44px; background: rgba(214,209,200,0.7)"></span>
+<span style="font-size: 10px; letter-spacing: 0.32em; margin-right: -0.32em">SCROLL</span>
+<svg width="16" height="9" viewBox="0 0 16 9" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="1,1 8,8 15,1"></polyline></svg>
+</a>
+</section>
+
+<section id="philosophy" style="padding: 112px 24px 104px; border-top: 1px solid #23211D">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">PHILOSOPHY</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6.4vw, 36px); line-height: 1.6; letter-spacing: 0.1em">どんな想いで、<br>企業と向き合うのか。</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px 64px">
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 28px; border-top: 1px solid #3A3427">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: clamp(48px, 14vw, 72px); line-height: 1.15; letter-spacing: 0.08em; color: #D9BD84">誠心誠意</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0.24em; color: #A39E95">Wholehearted Commitment</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D1C8">相手の立場に立ち、真心を尽くして向き合う。<br>経営者が言葉にしきれない悩みまで、時間をかけて聞くところから始めます。</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 28px; border-top: 1px solid #3A3427">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: clamp(48px, 14vw, 72px); line-height: 1.15; letter-spacing: 0.08em; color: #D9BD84">共存共栄</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0.24em; color: #A39E95">Growing Together</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D1C8">企業の成長を自分のこととして考え、ともに未来を築く。<br>目先の取引より、その会社が数年後にどうなっているかを基準に提案します。</p>
+</div>
+</div>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 18px; line-height: 2.3; letter-spacing: 0.12em; color: #EDE8DF">企業の課題を、自分のこととして考える。<br>目先の利益だけではなく、その先の成長まで。<br>誠実に向き合い、ともに考え、ともに動く。<br>一度きりの取引ではなく、<br>長く信頼されるパートナーであり続ける。</p>
+</div>
+</section>
+
+<section id="about" style="padding: 104px 24px; background: #111112; border-top: 1px solid #23211D">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">ABOUT FUMIYA</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6.4vw, 36px); line-height: 1.6; letter-spacing: 0.1em">車の現場から、<br>経営の現場へ。</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 999 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 28px; letter-spacing: 0.2em">佐野 史弥</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 16px; letter-spacing: 0.3em; color: #A39E95">FUMIYA SANO</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0.12em; color: #C9A96E">CEO of RAF INDUSTRIES Inc.</p>
+</div>
+<p style="margin: 0; font-size: 16px; color: #D6D1C8">トヨタディーラーで、お客様と車の現場を知る。トヨタ自動車の開発部門で、ものづくりの精度と仕組みを学ぶ。独立後は自動車事業を基盤に、企業ブランディング、人材マッチング、国際ビジネスへと活動を広げている。</p>
+<p style="margin: 0; font-size: 16px; color: #D6D1C8">車の専門家であると同時に、経営者の課題を理解し、人・企業・技術・情報をつなぐビジネスパートナーとして動いています。</p>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-left: 1px solid #3A3427">
+<li style="padding: 0 0 22px 20px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: #C9A96E">01</span><span style="font-size: 16px">トヨタディーラー</span><span style="font-size: 14px; color: #A39E95">販売・整備の現場で、お客様と車に向き合う</span></li>
+<li style="padding: 0 0 22px 20px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: #C9A96E">02</span><span style="font-size: 16px">トヨタ自動車 開発部門</span><span style="font-size: 14px; color: #A39E95">開発技術者として、車づくりの最前線に従事</span></li>
+<li style="padding: 0 0 22px 20px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: #C9A96E">03</span><span style="font-size: 16px">独立</span><span style="font-size: 14px; color: #A39E95">自動車関連事業を立ち上げ、名古屋を拠点に展開</span></li>
+<li style="padding: 0 0 0 20px; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: #C9A96E">NOW</span><span style="font-size: 16px">FUMIYA STYLE</span><span style="font-size: 14px; color: #A39E95">企業の課題に、人・技術・仕組み・ネットワークで応える</span></li>
+</ol>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 6px 14px; border: 1px solid #4A4232; font-size: 13px; color: #C9A96E">国家整備士資格</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<a href="https://www.instagram.com/fumiya.style/" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; letter-spacing: 0.1em">Instagram ↗</a>
+<a href="https://www.tiktok.com/@fumiya.style" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; letter-spacing: 0.1em">TikTok ↗</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="approach" style="padding: 104px 24px; border-top: 1px solid #23211D">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">HOW I WORK</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6.4vw, 36px); line-height: 1.6; letter-spacing: 0.1em">何でも屋ではなく、<br>課題から組み立てる。</h2>
+<p style="margin: 0; font-size: 16px; color: #A39E95">依頼された仕事をこなすだけでは終わらせない。会社の背景、経営者の考え方、これからの方向性を理解したうえで、必要な支援を組み合わせます。</p>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0 48px">
+<li style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; gap: 18px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C9A96E; line-height: 1.4">01</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Shippori Mincho', serif; font-size: 18px">経営者の目線で、課題を捉える</span><span style="font-size: 15px; color: #A39E95">「車を替えたい」という相談の奥にある、コスト・採用・会社の見え方まで含めて考えます。</span></div></li>
+<li style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; gap: 18px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C9A96E; line-height: 1.4">02</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Shippori Mincho', serif; font-size: 18px">専門知識を、判断材料に変える</span><span style="font-size: 15px; color: #A39E95">自動車開発の現場で培った知識を、経営者が決めるための情報として整理します。</span></div></li>
+<li style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; gap: 18px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C9A96E; line-height: 1.4">03</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Shippori Mincho', serif; font-size: 18px">必要な人と企業を、つなぐ</span><span style="font-size: 15px; color: #A39E95">自分だけで抱え込まず、その課題に最適な専門家やパートナーを紹介します。</span></div></li>
+<li style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; gap: 18px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C9A96E; line-height: 1.4">04</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Shippori Mincho', serif; font-size: 18px">提案で終わらせず、一緒に動く</span><span style="font-size: 15px; color: #A39E95">話をまとめて終わりではなく、実行の段階まで伴走します。</span></div></li>
+<li style="padding: 24px 0; border-top: 1px solid #2A2722; display: flex; gap: 18px"><span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C9A96E; line-height: 1.4">05</span><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Shippori Mincho', serif; font-size: 18px">長く相談される関係を築く</span><span style="font-size: 15px; color: #A39E95">一つの案件が終わった後も、次の課題を最初に話してもらえる存在を目指します。</span></div></li>
+</ol>
+</div>
+</section>
+
+<section id="business" style="padding: 104px 24px; background: #111112; border-top: 1px solid #23211D">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">OUR BUSINESS</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6.4vw, 36px); line-height: 1.6; letter-spacing: 0.1em">どんな課題を、<br>解決できるのか。</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+
+<article style="background: #161616; border: 1px solid #2A2722; padding: 36px 24px 24px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.3em; color: #8C7B57">01 — Mobility &amp; Automotive</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 32px; letter-spacing: 0.1em; color: #D9BD84">ANUBIS GARAGE</h3>
+<p style="margin: 0; font-size: 16px; color: #D6D1C8">社用車のコスト、事故の対応、買い替えの判断。車にまつわる経営判断を、元トヨタ技術者がまとめて引き受けます。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">輸入車販売</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">整備・修理</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">カスタム・コーティング</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">法人車両管理</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">事故・保険サポート</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">購入・売却の最適化</span>
+</div>
+<a href="https://anubis-nagoya.com/" target="_blank" rel="noopener" style="margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #2A2722; padding-top: 12px; font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.3em; text-decoration: none">VIEW BUSINESS <span aria-hidden="true">↗</span></a></article>
+
+<article style="background: #161616; border: 1px solid #2A2722; padding: 36px 24px 24px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.3em; color: #8C7B57">02 — Corporate Branding &amp; Growth</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 32px; letter-spacing: 0.1em; color: #D9BD84">BRANDING</h3>
+<p style="margin: 0; font-size: 16px; color: #D6D1C8">いい会社なのに、伝わっていない。その一点で、採用も集客も止まっている。企業の魅力を見つけ、届く形にして社会へ伝えます。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">SNS運用</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">企業ブランディング</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">採用ブランディング</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">Webサイト制作</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">広報・マーケティング</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">AI活用・業務効率化</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">営業支援・事業改善</span>
+</div>
+<a href="Branding.dc.html" style="margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #2A2722; padding-top: 12px; font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.3em; text-decoration: none">VIEW BUSINESS <span aria-hidden="true">→</span></a>
+</article>
+
+<article style="background: #161616; border: 1px solid #2A2722; padding: 36px 24px 24px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.3em; color: #8C7B57">03 — International Business Development</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 32px; letter-spacing: 0.1em; color: #D9BD84">GLOBAL BUSINESS</h3>
+<p style="margin: 0; font-size: 16px; color: #D6D1C8">海外と取引したいが、相手も入口も見えない。韓国・中国と日本をつなぎ、国境を越えた新しい商流をつくります。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">韓国関連事業</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">中国企業の日本参入支援</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">海外×日本企業マッチング</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">新規商流構築</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">国際事業開発</span>
+</div>
+<a href="Global.dc.html" style="margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #2A2722; padding-top: 12px; font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.3em; text-decoration: none">VIEW BUSINESS <span aria-hidden="true">→</span></a>
+</article>
+
+<article style="background: #161616; border: 1px solid #2A2722; padding: 36px 24px 24px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.3em; color: #8C7B57">04 — People &amp; Business Connections</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 32px; letter-spacing: 0.1em; color: #D9BD84">BUSINESS MATCHING</h3>
+<p style="margin: 0; font-size: 16px; color: #D6D1C8">会うべき人に、まだ会えていない。学生と企業、企業と企業。人と事業の可能性を、確かな関係でつなぎます。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">学生×企業マッチング</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">採用支援</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">企業間ネットワーク</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">人材×事業機会</span>
+</div>
+<a href="Matching.dc.html" style="margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #2A2722; padding-top: 12px; font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.3em; text-decoration: none">VIEW BUSINESS <span aria-hidden="true">→</span></a>
+</article>
+
+<article style="background: #161616; border: 1px solid #2A2722; padding: 36px 24px 24px; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.3em; color: #8C7B57">05 — System Development</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 32px; letter-spacing: 0.1em; color: #D9BD84">SYSTEM DEVELOPMENT</h3>
+<p style="margin: 0; font-size: 16px; color: #D6D1C8">紙やExcelでの管理が限界。でも、システムへの投資は重い。業務に合わせたシステムを開発し、補助金・助成金を活用した導入までご相談いただけます。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">システム開発</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">業務効率化</span><span style="padding: 4px 10px; border: 1px solid #3A3427; font-size: 12px; color: #B8A47A">補助金・助成金の活用</span>
+</div>
+<a href="System.dc.html" style="margin-top: auto; min-height: 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #2A2722; padding-top: 12px; font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.3em; text-decoration: none">VIEW BUSINESS <span aria-hidden="true">→</span></a>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="people" aria-labelledby="people-title" style="padding: 112px 24px 104px; border-top: 1px solid #23211D">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 720px">
+<h2 id="people-title" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(44px, 13vw, 88px); line-height: 1; letter-spacing: 0.08em; color: #F3EEE5">MY PEOPLE.</h2>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 18px; letter-spacing: 0.24em; color: #C9A96E">俺が信頼する、仲間たち。</p>
+<div style="width: 48px; height: 1px; background: #C9A96E; margin: 8px 0"></div>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2.2; letter-spacing: 0.1em; color: #D6D1C8">一人でできることには、限界がある。<br>しかし、信頼できる仲間がいれば、<br>可能性はどこまでも広がる。</p>
+<p style="margin: 0; font-size: 16px; color: #A39E95">業界も、国籍も、肩書きも違う。<br>それぞれの経験と専門性をつなぎ、企業の新たな可能性を切り拓く。</p>
+</div>
+<div style="max-width: 720px; display: flex; flex-direction: column">
+<a href="People.dc.html" style="min-height: 64px; display: flex; align-items: center; gap: 18px; padding: 14px 0; border-top: 1px solid #3A3427; border-bottom: 1px solid #3A3427; color: #EDE8DF; text-decoration: none">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1; color: #C9A96E">00</span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em">Business Architect</span>
+<span style="font-size: 13px; color: #A39E95">自動車 × 経営 × ブランディング × 国際ネットワーク</span>
+</span>
+<span aria-hidden="true" style="color: #C9A96E">→</span>
+</a>
+<a href="People.dc.html" style="margin-top: 28px; align-self: flex-start; min-height: 52px; padding: 0 28px; display: flex; align-items: center; gap: 14px; border: 1px solid #C9A96E; color: #C9A96E; font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.3em; text-decoration: none">MEET MY PEOPLE <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+
+<section id="connect" style="padding: 104px 24px; border-top: 1px solid #23211D">
+<div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">CONNECT WITH FUMIYA</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(32px, 9vw, 52px); line-height: 1.2; letter-spacing: 0.12em">FOLLOW MY JOURNEY</h2>
+<p style="margin: 0; font-size: 16px; color: #A39E95">仕事への想い、挑戦、そして日常。<br>FUMIYA STYLEのリアルを発信しています。</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+<a href="https://www.instagram.com/fumiya.style/" target="_blank" rel="noopener" style="border: 1px solid #3A3427; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: #EDE8DF">
+<span style="display: flex; align-items: center; justify-content: space-between; color: #C9A96E"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"></circle></svg><span aria-hidden="true">↗</span></span>
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.4em; color: #C9A96E">INSTAGRAM</span>
+<span style="font-size: 18px; letter-spacing: 0.06em">@fumiya.style</span>
+<span style="font-size: 14px; color: #A39E95">仕事の実績、企業支援、ブランディング活動、ライフスタイル。</span>
+</a>
+<a href="https://www.tiktok.com/@fumiya.style" target="_blank" rel="noopener" style="border: 1px solid #3A3427; padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: #EDE8DF">
+<span style="display: flex; align-items: center; justify-content: space-between; color: #C9A96E"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"></path></svg><span aria-hidden="true">↗</span></span>
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.4em; color: #C9A96E">TIKTOK</span>
+<span style="font-size: 18px; letter-spacing: 0.06em">@fumiya.style</span>
+<span style="font-size: 14px; color: #A39E95">人柄、考え方、挑戦、日常。仕事に向き合う姿勢をそのまま。</span>
+</a>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding: 112px 24px 120px; background: #111112; border-top: 1px solid #23211D">
+<div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">CONTACT</p>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6.4vw, 36px); line-height: 1.6; letter-spacing: 0.1em">まずは、<br>話を聞かせてください。</h2>
+<p style="margin: 0; font-size: 16px; color: #A39E95">事業の相談、協業のご提案、まだ形になっていない構想まで。内容を確認し、佐野よりご連絡します。</p>
+</div>
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="border: 1px solid #C9A96E; padding: 40px 24px; display: flex; flex-direction: column; gap: 12px; text-align: center">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.2em; color: #D9BD84">THANK YOU</p>
+<p style="margin: 0; font-size: 16px">ご相談ありがとうございます。<br>内容を確認のうえ、ご連絡いたします。</p>
+<p style="margin: 0; font-size: 12px; color: #6E6A63">※プレビューのため、実際には送信されていません</p>
+<button type="button" onClick="{{ reset }}" style="align-self: center; min-height: 44px; padding: 0 20px; background: transparent; border: 1px solid #3A3427; color: #A39E95; font-size: 13px; cursor: pointer">フォームに戻る</button>
+</div>
+</sc-if>
+<sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit }}" style="display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="fs-name" style="font-size: 14px; letter-spacing: 0.1em">お名前 <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<input id="fs-name" name="name" type="text" required="" autocomplete="name" style="min-height: 52px; padding: 0 14px; background: #0B0B0C; border: 1px solid #3A3427; color: #EDE8DF; font-size: 16px; font-family: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="fs-company" style="font-size: 14px; letter-spacing: 0.1em">会社名 <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<input id="fs-company" name="company" type="text" required="" autocomplete="organization" style="min-height: 52px; padding: 0 14px; background: #0B0B0C; border: 1px solid #3A3427; color: #EDE8DF; font-size: 16px; font-family: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="fs-email" style="font-size: 14px; letter-spacing: 0.1em">メールアドレス <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<input id="fs-email" name="email" type="email" required="" autocomplete="email" style="min-height: 52px; padding: 0 14px; background: #0B0B0C; border: 1px solid #3A3427; color: #EDE8DF; font-size: 16px; font-family: inherit">
+</div>
+<fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="padding: 0; margin-bottom: 10px; font-size: 14px; letter-spacing: 0.1em">ご相談の領域 <span style="color: #8F8A82; font-size: 12px">任意・複数可</span></legend>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{ areas }}" as="a" hint-placeholder-count="5">
+<button type="button" aria-pressed="{{ a.pressed }}" onClick="{{ a.toggle }}" style="{{ a.style }}">{{ a.label }}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="fs-message" style="font-size: 14px; letter-spacing: 0.1em">ご相談内容 <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<textarea id="fs-message" name="message" rows="6" required="" placeholder="現在の課題や、ご相談したいことをご自由にお書きください。" style="padding: 14px; background: #0B0B0C; border: 1px solid #3A3427; color: #EDE8DF; font-size: 16px; font-family: inherit; line-height: 1.8; resize: vertical"></textarea>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 10px">
+<input id="fs-privacy" type="checkbox" required="" style="width: 20px; height: 20px; margin: 4px 0 0; accent-color: #C9A96E; flex: none">
+<label for="fs-privacy" style="font-size: 14px; color: #A39E95">ご入力いただいた個人情報は、お問い合わせへの回答にのみ使用します。<a href="Privacy.dc.html">プライバシーポリシー</a>に同意のうえ送信してください。</label>
+</div>
+<button type="submit" style="min-height: 56px; background: #C9A96E; color: #0B0B0C; border: 0; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; font-family: inherit; cursor: pointer">事業について相談する</button>
+</form>
+</sc-if>
+</div>
+</section>
+
+<footer id="privacy" style="padding: 64px 24px 96px; border-top: 1px solid #23211D">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 0.32em">FUMIYA STYLE</p>
+<p style="margin: 0; font-size: 14px; color: #8F8A82">Nagoya, Aichi, Japan</p>
+<nav aria-label="フッター" style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href="https://www.instagram.com/fumiya.style/" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; font-size: 14px">Instagram</a>
+<a href="https://www.tiktok.com/@fumiya.style" target="_blank" rel="noopener" style="min-height: 44px; display: flex; align-items: center; font-size: 14px">TikTok</a>
+<a href="#contact" style="min-height: 44px; display: flex; align-items: center; font-size: 14px">お問い合わせ</a>
+<a href="Privacy.dc.html" style="min-height: 44px; display: flex; align-items: center; font-size: 14px">プライバシーポリシー</a>
+</nav>
+<p style="margin: 0; font-size: 12px; color: #6E6A63">© FUMIYA STYLE</p>
+</div>
+</footer>
+
+<sc-if value="{{ showSticky }}" hint-placeholder-val="{{ true }}">
+<div id="fs-sticky" style="position: sticky; bottom: 16px; display: flex; justify-content: center; padding: 0 16px; pointer-events: none">
+<a href="#contact" style="pointer-events: auto; min-height: 48px; padding: 0 28px; display: flex; align-items: center; gap: 10px; background: rgba(11,11,12,0.94); border: 1px solid #C9A96E; color: #C9A96E; font-size: 14px; letter-spacing: 0.2em; text-decoration: none">CONTACT ｜ 相談する</a>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"stickyContact":{"editor":"boolean","default":true},"$preview":{"width":390,"height":10100}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false, picked: {}, menuOpen: false };
+  }
+  renderVals() {
+    var self = this;
+    var labels = ['ANUBIS GARAGE（車・モビリティ）', 'BRANDING', 'GLOBAL BUSINESS', 'BUSINESS MATCHING', 'SYSTEM DEVELOPMENT', 'まだ決まっていない'];
+    var picked = this.state.picked;
+    var areas = labels.map(function (label) {
+      var on = !!picked[label];
+      return {
+        label: label,
+        pressed: on ? 'true' : 'false',
+        style: 'min-height: 44px; padding: 0 14px; font-size: 13px; font-family: inherit; cursor: pointer; border: 1px solid ' + (on ? '#C9A96E' : '#3A3427') + '; background: ' + (on ? '#C9A96E' : 'transparent') + '; color: ' + (on ? '#0B0B0C' : '#D6D1C8'),
+        toggle: function () {
+          var next = Object.assign({}, self.state.picked);
+          next[label] = !next[label];
+          self.setState({ picked: next });
+        }
+      };
+    });
+    return {
+      menuOpen: this.state.menuOpen,
+      openMenu: function () { self.setState({ menuOpen: true }); },
+      closeMenu: function () { self.setState({ menuOpen: false }); },
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      areas: areas,
+      showSticky: this.props.stickyContact ?? true,
+      submit: function (e) { if (e && e.preventDefault) e.preventDefault(); self.setState({ sent: true }); },
+      reset: function () { self.setState({ sent: false, picked: {} }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

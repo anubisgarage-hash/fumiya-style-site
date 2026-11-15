@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>プライバシーポリシー | FUMIYA STYLE</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&amp;family=Shippori+Mincho:wght@500;600&amp;family=Noto+Sans+JP:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0B0B0C}
+a{color:#C9A96E}a:hover{color:#E2C994}
+a:focus-visible{outline:2px solid #C9A96E;outline-offset:3px}
+.h3{margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:18px;letter-spacing:.08em;color:#D9BD84}
+.txt{margin:0;font-size:15px;color:#D6D1C8}
+.blk{padding:24px 0;border-top:1px solid #2A2722;display:flex;flex-direction:column;gap:10px}
+.tbd{color:#C9A96E}
+.fs-mlink{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-height:56px;padding:14px 0;border-bottom:1px solid #2A2722;color:#EDE8DF;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:.14em}
+.fs-mlink small{font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.1em;color:#A39E95}
+.fs-msub{min-height:44px;display:flex;align-items:center;color:#C9A96E;text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.2em}
+</style>
+</helmet>
+<div style="background: #0B0B0C; color: #EDE8DF; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; line-height: 1.9; letter-spacing: 0.04em; min-height: 100vh">
+
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(11,11,12,0.94); border-bottom: 1px solid #23211D">
+<div style="max-width: 1200px; margin: 0 auto; padding: 8px 12px 8px 20px; display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<a href="Main.dc.html" style="display: flex; flex-direction: column; gap: 4px; text-decoration: none">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.2; letter-spacing: 0.2em; white-space: nowrap; color: #D9BD84">FUMIYA STYLE</span>
+<span style="font-size: 8px; line-height: 1.4; letter-spacing: 0.22em; white-space: nowrap; color: #D6D1C8">PERSONAL BRAND &amp; BUSINESS</span>
+</a>
+<div style="display: flex; align-items: center; flex: none">
+<a href="https://www.instagram.com/fumiya.style/" target="_blank" rel="noopener" aria-label="Instagram（新しいタブで開く）" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #D9BD84">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"></circle></svg>
+</a>
+<a href="https://www.tiktok.com/@fumiya.style" target="_blank" rel="noopener" aria-label="TikTok（新しいタブで開く）" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #D9BD84">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"></path></svg>
+</a>
+<span aria-hidden="true" style="width: 1px; height: 28px; margin: 0 4px; background: #6A5C40"></span>
+<button type="button" id="fs-menu-open" aria-label="メニューを開く" onClick="{{ openMenu }}" style="width: 44px; height: 44px; padding: 0; background: transparent; border: 0; display: flex; align-items: center; justify-content: center; color: #D9BD84; cursor: pointer">
+<svg width="28" height="20" viewBox="0 0 28 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="0" y1="1" x2="28" y2="1"></line><line x1="0" y1="10" x2="28" y2="10"></line><line x1="0" y1="19" x2="28" y2="19"></line></svg>
+</button>
+</div>
+</div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div id="fs-menu" role="dialog" aria-modal="true" aria-label="メニュー" style="position: fixed; inset: 0; z-index: 50; background: #0B0B0C; overflow-y: auto">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 12px 0 20px; display: flex; align-items: flex-start; justify-content: space-between">
+<span style="display: flex; flex-direction: column; gap: 4px; padding-top: 6px">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.2; letter-spacing: 0.2em; white-space: nowrap; color: #D9BD84">FUMIYA STYLE</span>
+<span style="font-size: 8px; line-height: 1.4; letter-spacing: 0.22em; white-space: nowrap; color: #D6D1C8">PERSONAL BRAND &amp; BUSINESS</span>
+</span>
+<button type="button" id="fs-menu-close" aria-label="メニューを閉じる" onClick="{{ closeMenu }}" style="width: 44px; height: 44px; padding: 0; background: transparent; border: 0; display: flex; align-items: center; justify-content: center; color: #D9BD84; cursor: pointer">
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="2" y1="2" x2="20" y2="20"></line><line x1="20" y1="2" x2="2" y2="20"></line></svg>
+</button>
+</div>
+<nav aria-label="サイトメニュー" style="max-width: 640px; margin: 0 auto; padding: 32px 28px 56px; display: flex; flex-direction: column">
+<a href="Main.dc.html#philosophy" class="fs-mlink"><span>PHILOSOPHY</span><small>経営哲学</small></a>
+<a href="Main.dc.html#about" class="fs-mlink"><span>ABOUT</span><small>佐野史弥について</small></a>
+<a href="Main.dc.html#approach" class="fs-mlink"><span>HOW I WORK</span><small>向き合い方</small></a>
+<a href="Main.dc.html#business" class="fs-mlink"><span>BUSINESS</span><small>事業領域</small></a>
+<div style="display: flex; flex-direction: column; padding: 4px 0 12px 16px; border-bottom: 1px solid #2A2722">
+<a href="https://anubis-nagoya.com/" target="_blank" rel="noopener" class="fs-msub">ANUBIS GARAGE ↗</a>
+<a href="Branding.dc.html" class="fs-msub">BRANDING</a>
+<a href="Global.dc.html" class="fs-msub">GLOBAL BUSINESS</a>
+<a href="Matching.dc.html" class="fs-msub">BUSINESS MATCHING</a>
+<a href="System.dc.html" class="fs-msub">SYSTEM DEVELOPMENT</a>
+</div>
+<a href="People.dc.html" class="fs-mlink"><span>MY PEOPLE.</span><small>信頼する仲間たち</small></a>
+<a href="Main.dc.html#connect" class="fs-mlink"><span>CONNECT</span><small>SNS</small></a>
+<a href="Main.dc.html#contact" style="margin-top: 32px; min-height: 56px; display: flex; align-items: center; justify-content: center; background: #C9A96E; color: #0B0B0C; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; text-decoration: none">事業について相談する</a>
+</nav>
+</div>
+</sc-if>
+
+<main style="padding: 80px 24px 96px">
+<div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">PRIVACY POLICY</p>
+<h1 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 28px; letter-spacing: 0.12em">プライバシーポリシー</h1>
+<p class="txt">RAF INDUSTRIES Inc.（以下「当社」）は、お問い合わせ等を通じてお預かりする個人情報を、以下の方針に基づき適切に取り扱います。</p>
+<div style="display: flex; flex-direction: column">
+<div class="blk"><h2 class="h3">1. 取得する情報</h2><p class="txt">お名前、会社名、メールアドレス、ご相談内容など、お問い合わせフォームに入力いただいた情報。</p></div>
+<div class="blk"><h2 class="h3">2. 利用目的</h2><p class="txt">お問い合わせへの回答、ご相談に関するご連絡、ご依頼いただいた業務の遂行のために利用します。</p></div>
+<div class="blk"><h2 class="h3">3. 第三者への提供</h2><p class="txt">法令に基づく場合を除き、ご本人の同意なく第三者に提供しません。ご紹介・マッチングのために情報を共有する場合は、事前にご本人の同意をいただきます。</p></div>
+<div class="blk"><h2 class="h3">4. 安全管理</h2><p class="txt">お預かりした個人情報は、漏えい・紛失等を防ぐため適切に管理します。</p></div>
+<div class="blk"><h2 class="h3">5. 開示・訂正・削除</h2><p class="txt">ご本人から個人情報の開示・訂正・削除のご請求があった場合は、本人確認のうえ対応します。</p></div>
+<div class="blk"><h2 class="h3">6. アクセス解析</h2><p class="txt">現在、アクセス解析ツールは使用していません。導入する場合は、本ページにてお知らせします。</p></div>
+<div class="blk"><h2 class="h3">7. お問い合わせ窓口</h2><p class="txt">個人情報の取り扱いに関するお問い合わせは、本サイトのお問い合わせフォームよりご連絡ください。</p></div>
+<div class="blk"><h2 class="h3">8. 改定</h2><p class="txt">本ポリシーは必要に応じて改定し、本ページで公表します。</p><p class="txt">制定日：2026年11月</p></div>
+</div>
+<a href="Main.dc.html" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; letter-spacing: 0.1em">← トップページへ戻る</a>
+</div>
+</main>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menuOpen: false };
+  }
+  renderVals() {
+    var self = this;
+    return {
+      menuOpen: this.state.menuOpen,
+      openMenu: function () { self.setState({ menuOpen: true }); },
+      closeMenu: function () { self.setState({ menuOpen: false }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
