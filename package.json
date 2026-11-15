@@ -6,10 +6,14 @@
   "scripts": {
     "build:static": "python3 tools/build.py design public https://fumiya-style.com",
     "dev": "netlify dev",
-    "test": "node --test --test-concurrency=1 tests/api.test.mjs"
+    "test": "node --test --test-concurrency=1 tests/api.test.mjs",
+    "build": "echo no build step"
   },
   "dependencies": {
     "@netlify/blobs": "^8.1.0",
     "@netlify/functions": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

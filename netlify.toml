@@ -1,8 +1,9 @@
 # FUMIYA STYLE — static pages in /public, 参考実例 (works) rendered by functions.
 # No build step: public/ is generated locally by tools/build.py and committed.
 [build]
+  base = ""
   publish = "public"
-  command = ""
+  command = "echo \"no build step: public/ is pre-built\""
 
 [functions]
   node_bundler = "esbuild"
