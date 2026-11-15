@@ -212,17 +212,21 @@ export function publicList(idx, now = Date.now()) {
 // ---- /branding/ (existing page + latest works) ----
 export function renderBranding(idx) {
   const latest = publicList(idx).slice(0, 3);
-  const section = latest.length ? `<section style="padding: 88px 24px; background: #111112; border-top: 1px solid #23211D">
+  const section = `<section id="works" style="padding: 88px 24px; background: #111112; border-top: 1px solid #23211D">
 <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
 <p class="lbl">WORKS &amp; CASE STUDIES</p>
 <h2 class="h2">参考実例</h2>
-<div class="wk-grid three">${latest.map((s) => card(s)).join("\n")}</div>
-<a href="/branding/works/" style="min-height: 44px; display: flex; align-items: center; gap: 8px; font-size: 15px; letter-spacing: 0.08em">参考実例をすべて見る <span aria-hidden="true">→</span></a>
+<p style="margin: 0; color: #A39E95; line-height: 1.9">企業の背景や想いを理解し、全体設計から実行まで伴走した事例を紹介しています。</p>
+${latest.length ? `<div class="wk-grid three">${latest.map((s) => card(s)).join("\n")}</div>` : ""}
+<a class="wk-btn" href="/branding/works/" style="align-self: flex-start">参考実例を見る <span aria-hidden="true">→</span></a>
 </div>
-</section>` : "";
+</section>`;
+  // Also a jump link right under the page title so the works are reachable without scrolling.
+  const lead = '<a href="#works" style="min-height: 44px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; letter-spacing: 0.08em">参考実例を見る <span aria-hidden="true">↓</span></a>\n</div>\n</section>';
   let html = brandingTemplate().replace("<!--WORKS_LATEST-->", section);
-  if (section) html = html.replace("</style>", WORKS_CSS + "</style>");
-  return html;
+  const i = html.indexOf("全体設計から実行まで伴走する。</p>");
+  if (i > 0) { const j = html.indexOf("</div>\n</section>", i); if (j > 0) html = html.slice(0, j) + lead + html.slice(j + "</div>\n</section>".length); }
+  return html.replace("</style>", WORKS_CSS + "</style>");
 }
 
 // ---- /branding/works/ ----

@@ -164,7 +164,7 @@ test("cross-origin writes are refused even with a valid cookie", async () => {
 
 test("branding page shows latest works; unknown article is a real 404", async () => {
   const b = (await call("/branding/", { auth: false })).data;
-  assert.match(b, /参考実例をすべて見る/);
+  assert.match(b, /参考実例を見る/);
   assert.match(b, /nagoya-retail-web/);
   assert.equal((await call("/branding/works/does-not-exist/", { auth: false })).status, 404);
 });
