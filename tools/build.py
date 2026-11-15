@@ -164,12 +164,12 @@ var f=q.get('from');var h=document.getElementById('fs-source');if(h&&f&&/^[a-z0-
         body = body.replace('/_blob/59af36edc787f40654fa1e72d2088e65', '/hero.jpg')
         ld = {"@context": "https://schema.org", "@type": "ProfilePage", "url": SITE + "/profile/", "name": title,
               "inLanguage": "ja", "dateModified": "2026-11-16",
-              "mainEntity": {"@type": "Person", "@id": SITE + "/profile/#person", "name": "佐野史弥", "alternateName": ["さの ふみや", "サノフミヤ", "Fumiya Sano"],
+              "mainEntity": {"@type": "Person", "@id": SITE + "/profile/#person", "name": "佐野史弥", "alternateName": ["さの ふみや", "サノフミヤ", "Fumiya Sano", "バブリングニキ"],
                 "url": SITE + "/profile/", "image": SITE + "/hero.jpg",
                 "jobTitle": ["RAF INDUSTRIES 株式会社 代表取締役", "ANUBIS NAGOYA 代表"],
                 "worksFor": [{"@type": "Organization", "name": "RAF INDUSTRIES 株式会社"},
                              {"@type": "AutoRepair", "name": "ANUBIS NAGOYA", "url": "https://anubis-nagoya.com/"}],
-                "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": n} for n in ["国家整備士（ガソリン・ジーゼル）", "国家車体整備士", "トヨタボデー検定1級"]],
+                "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": n} for n in ["国家整備士（ガソリン・ジーゼル）", "国家車体整備士", "トヨタボデー検定1級", "損害保険販売人", "古物自動車商"]],
                 "knowsAbout": ["ECUチューニング", "バブリング", "輸入車", "企業ブランディング", "広報支援"],
                 "address": {"@type": "PostalAddress", "addressLocality": "名古屋市", "addressRegion": "愛知県", "addressCountry": "JP"},
                 "sameAs": ["https://www.instagram.com/fumiya.style/", "https://www.tiktok.com/@fumiya.style"]}}
