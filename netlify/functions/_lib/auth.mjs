@@ -6,15 +6,24 @@ import crypto from "node:crypto";
 const COOKIE = "fs_admin";
 const SESSION_DAYS = 30;
 
+function adminPassword() {
+  let v = "";
+  try { v = globalThis.Netlify?.env?.get?.("ADMIN_PASSWORD") || ""; } catch {}
+  return v || process.env.ADMIN_PASSWORD || "";
+}
+export function passwordState() {
+  const pw = adminPassword();
+  return !pw ? "missing" : pw.length < 8 ? "short" : "ok";
+}
 function signingKey() {
-  const pw = process.env.ADMIN_PASSWORD || "";
+  const pw = adminPassword();
   if (pw.length < 8) return null;
   return crypto.createHash("sha256").update("fs-session-v1:" + pw).digest();
 }
 export function passwordConfigured() { return !!signingKey(); }
 
 export function checkPassword(input) {
-  const pw = process.env.ADMIN_PASSWORD || "";
+  const pw = adminPassword();
   const a = crypto.createHash("sha256").update(String(input || "")).digest();
   const b = crypto.createHash("sha256").update(pw).digest();
   return pw.length >= 8 && crypto.timingSafeEqual(a, b);

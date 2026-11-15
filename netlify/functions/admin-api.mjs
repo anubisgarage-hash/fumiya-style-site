@@ -3,7 +3,7 @@
 // request — checked here on the server, not just in the browser.
 import crypto from "node:crypto";
 import { purgeCache } from "@netlify/functions";
-import { checkPassword, isAdmin, makeSession, passwordConfigured, sameOrigin, sessionCookie, SESSION_MAX_AGE } from "./_lib/auth.mjs";
+import { checkPassword, isAdmin, makeSession, passwordConfigured, passwordState, sameOrigin, sessionCookie, SESSION_MAX_AGE } from "./_lib/auth.mjs";
 import {
   CATEGORIES, PROGRESS, ROLES, contentChanged, defaultSlug, getPost, guidanceLeft, isId, loadIndex, mediaKeys,
   normalizePost, samplePost, saveIndex, sortByPublishDesc, stores, summarize, validSlug,
@@ -70,7 +70,7 @@ export default async (req, context) => {
   const method = req.method;
 
   // ---- public (no session) ----
-  if (route === "session" && method === "GET") return json({ loggedIn: isAdmin(req), configured: passwordConfigured() });
+  if (route === "session" && method === "GET") return json({ loggedIn: isAdmin(req), configured: passwordConfigured(), password: passwordState() });
   if (route === "login" && method === "POST") {
     if (!sameOrigin(req)) return fail(403, "不正なリクエストです。");
     if (!passwordConfigured()) return fail(503, "管理画面のパスワードがまだ設定されていません（Netlifyの環境変数 ADMIN_PASSWORD）。");
