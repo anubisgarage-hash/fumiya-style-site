@@ -31,15 +31,15 @@ CONTACT_FORM = '''<form name="contact" method="POST" action="/thanks.html" data-
 <input type="hidden" name="source_page" id="fs-source" value="">
 <p hidden><label>この欄は空のままにしてください <input name="bot-field"></label></p>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-name" style="font-size: 14px; letter-spacing: 0.1em">お名前 <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
+<label for="fs-name" style="font-size: 14px; letter-spacing: 0.1em">お名前 <span style="color: #1F2B47; font-size: 12px">必須</span></label>
 <input id="fs-name" name="name" type="text" required autocomplete="name" class="fld">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-company" style="font-size: 14px; letter-spacing: 0.1em">会社名 <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
+<label for="fs-company" style="font-size: 14px; letter-spacing: 0.1em">会社名 <span style="color: #1F2B47; font-size: 12px">必須</span></label>
 <input id="fs-company" name="company" type="text" required autocomplete="organization" class="fld">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-email" style="font-size: 14px; letter-spacing: 0.1em">メールアドレス <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
+<label for="fs-email" style="font-size: 14px; letter-spacing: 0.1em">メールアドレス <span style="color: #1F2B47; font-size: 12px">必須</span></label>
 <input id="fs-email" name="email" type="email" required autocomplete="email" class="fld">
 </div>
 <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px">
@@ -54,26 +54,26 @@ CONTACT_FORM = '''<form name="contact" method="POST" action="/thanks.html" data-
 </div>
 </fieldset>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-message" style="font-size: 14px; letter-spacing: 0.1em">ご相談内容 <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
+<label for="fs-message" style="font-size: 14px; letter-spacing: 0.1em">ご相談内容 <span style="color: #1F2B47; font-size: 12px">必須</span></label>
 <textarea id="fs-message" name="message" rows="6" required placeholder="現在の課題や、ご相談したいことをご自由にお書きください。" class="fld" style="padding: 14px; line-height: 1.8; resize: vertical"></textarea>
 </div>
 <div style="display: flex; align-items: flex-start; gap: 10px">
-<input id="fs-privacy" name="privacy" value="同意" type="checkbox" required style="width: 20px; height: 20px; margin: 4px 0 0; accent-color: #3F3F3F; flex: none">
+<input id="fs-privacy" name="privacy" value="同意" type="checkbox" required style="width: 20px; height: 20px; margin: 4px 0 0; accent-color: #1F2B47; flex: none">
 <label for="fs-privacy" style="font-size: 14px; color: #6B6B6B">ご入力いただいた個人情報は、お問い合わせへの回答にのみ使用します。<a href="/privacy.html">プライバシーポリシー</a>に同意のうえ送信してください。</label>
 </div>
-<button type="submit" style="min-height: 56px; background: #3F3F3F; color: #F4F4F2; border: 0; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; font-family: inherit; cursor: pointer">事業について相談する</button>
+<button type="submit" style="min-height: 56px; background: #1F2B47; color: #F4F4F2; border: 0; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; font-family: inherit; cursor: pointer">事業について相談する</button>
 </form>'''
 
 EXTRA_CSS = '''html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 *,*::before,*::after{box-sizing:border-box}
 img{max-width:100%;height:auto}
 .fld{min-height:52px;padding:0 14px;background:#F4F4F2;border:1px solid #D2D2CD;color:#222222;font-size:16px;font-family:inherit;border-radius:0;width:100%}
-.fld:focus{border-color:#3F3F3F;outline:none}
+.fld:focus{border-color:#1F2B47;outline:none}
 .pill{position:relative;display:inline-flex}
 .pill input{position:absolute;opacity:0;width:1px;height:1px}
 .pill span{min-height:44px;padding:0 14px;display:inline-flex;align-items:center;font-size:13px;border:1px solid #D2D2CD;color:#3D3D3D;cursor:pointer}
-.pill input:checked+span{background:#3F3F3F;border-color:#3F3F3F;color:#F4F4F2}
-.pill input:focus-visible+span{outline:2px solid #3F3F3F;outline-offset:3px}
+.pill input:checked+span{background:#1F2B47;border-color:#1F2B47;color:#F4F4F2}
+.pill input:focus-visible+span{outline:2px solid #1F2B47;outline-offset:3px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}'''
 
 def head(title, desc, fname, helmet):
@@ -183,10 +183,10 @@ var f=q.get('from');var h=document.getElementById('fs-source');if(h&&f&&/^[a-z0-
 thanks_helmet = re.search(r"<helmet>(.*?)</helmet>", open(os.path.join(SRC, "Privacy.dc.html"), encoding="utf-8").read(), re.S).group(1)
 thanks = head("送信完了 | FUMIYA STYLE", "お問い合わせを受け付けました。", "thanks.html", thanks_helmet).replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"') + '''<main style="min-height: 100vh; background: #F4F4F2; color: #222222; font-family: 'Noto Sans JP', sans-serif; display: flex; align-items: center; justify-content: center; padding: 48px 24px; text-align: center">
 <div style="max-width: 560px; display: flex; flex-direction: column; align-items: center; gap: 20px">
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #3F3F3F">THANK YOU</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #1F2B47">THANK YOU</p>
 <h1 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 24px; line-height: 1.8; letter-spacing: 0.12em">ご相談ありがとうございます。</h1>
 <p style="margin: 0; font-size: 16px; line-height: 1.9; color: #3D3D3D">内容を確認のうえ、佐野よりご連絡いたします。</p>
-<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #3F3F3F; color: #3F3F3F; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
+<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #1F2B47; color: #1F2B47; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
 </div>
 </main>
 </body>
@@ -202,9 +202,9 @@ os.makedirs(os.path.join(OUT, "img"), exist_ok=True)
 shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "face-line.webp"), os.path.join(OUT, "img", "face-line.webp"))
 notfound = head("ページが見つかりません | FUMIYA STYLE", "お探しのページは見つかりませんでした。", "404.html", thanks_helmet).replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"') + '''<main style="min-height: 100vh; background: #F4F4F2; color: #222222; font-family: 'Noto Sans JP', sans-serif; display: flex; align-items: center; justify-content: center; padding: 48px 24px; text-align: center">
 <div style="max-width: 560px; display: flex; flex-direction: column; align-items: center; gap: 20px">
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #3F3F3F">404 NOT FOUND</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #1F2B47">404 NOT FOUND</p>
 <h1 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 22px; line-height: 1.8; letter-spacing: 0.1em">お探しのページは見つかりませんでした。</h1>
-<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #3F3F3F; color: #3F3F3F; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
+<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #1F2B47; color: #1F2B47; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
 </div>
 </main>
 </body>
