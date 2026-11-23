@@ -31,19 +31,19 @@ CONTACT_FORM = '''<form name="contact" method="POST" action="/thanks.html" data-
 <input type="hidden" name="source_page" id="fs-source" value="">
 <p hidden><label>この欄は空のままにしてください <input name="bot-field"></label></p>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-name" style="font-size: 14px; letter-spacing: 0.1em">お名前 <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<label for="fs-name" style="font-size: 14px; letter-spacing: 0.1em">お名前 <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
 <input id="fs-name" name="name" type="text" required autocomplete="name" class="fld">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-company" style="font-size: 14px; letter-spacing: 0.1em">会社名 <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<label for="fs-company" style="font-size: 14px; letter-spacing: 0.1em">会社名 <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
 <input id="fs-company" name="company" type="text" required autocomplete="organization" class="fld">
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-email" style="font-size: 14px; letter-spacing: 0.1em">メールアドレス <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<label for="fs-email" style="font-size: 14px; letter-spacing: 0.1em">メールアドレス <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
 <input id="fs-email" name="email" type="email" required autocomplete="email" class="fld">
 </div>
 <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px">
-<legend style="padding: 0; margin-bottom: 10px; font-size: 14px; letter-spacing: 0.1em">ご相談の領域 <span style="color: #8F8A82; font-size: 12px">任意・複数可</span></legend>
+<legend style="padding: 0; margin-bottom: 10px; font-size: 14px; letter-spacing: 0.1em">ご相談の領域 <span style="color: #767676; font-size: 12px">任意・複数可</span></legend>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <label class="pill"><input type="checkbox" name="area_anubis" value="希望"><span>ANUBIS NAGOYA（車・モビリティ）</span></label>
 <label class="pill"><input type="checkbox" name="area_branding" value="希望"><span>BRANDING</span></label>
@@ -54,26 +54,26 @@ CONTACT_FORM = '''<form name="contact" method="POST" action="/thanks.html" data-
 </div>
 </fieldset>
 <div style="display: flex; flex-direction: column; gap: 8px">
-<label for="fs-message" style="font-size: 14px; letter-spacing: 0.1em">ご相談内容 <span style="color: #C9A96E; font-size: 12px">必須</span></label>
+<label for="fs-message" style="font-size: 14px; letter-spacing: 0.1em">ご相談内容 <span style="color: #3F3F3F; font-size: 12px">必須</span></label>
 <textarea id="fs-message" name="message" rows="6" required placeholder="現在の課題や、ご相談したいことをご自由にお書きください。" class="fld" style="padding: 14px; line-height: 1.8; resize: vertical"></textarea>
 </div>
 <div style="display: flex; align-items: flex-start; gap: 10px">
-<input id="fs-privacy" name="privacy" value="同意" type="checkbox" required style="width: 20px; height: 20px; margin: 4px 0 0; accent-color: #C9A96E; flex: none">
-<label for="fs-privacy" style="font-size: 14px; color: #A39E95">ご入力いただいた個人情報は、お問い合わせへの回答にのみ使用します。<a href="/privacy.html">プライバシーポリシー</a>に同意のうえ送信してください。</label>
+<input id="fs-privacy" name="privacy" value="同意" type="checkbox" required style="width: 20px; height: 20px; margin: 4px 0 0; accent-color: #3F3F3F; flex: none">
+<label for="fs-privacy" style="font-size: 14px; color: #6B6B6B">ご入力いただいた個人情報は、お問い合わせへの回答にのみ使用します。<a href="/privacy.html">プライバシーポリシー</a>に同意のうえ送信してください。</label>
 </div>
-<button type="submit" style="min-height: 56px; background: #C9A96E; color: #0B0B0C; border: 0; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; font-family: inherit; cursor: pointer">事業について相談する</button>
+<button type="submit" style="min-height: 56px; background: #3F3F3F; color: #F4F4F2; border: 0; font-size: 16px; font-weight: 500; letter-spacing: 0.2em; font-family: inherit; cursor: pointer">事業について相談する</button>
 </form>'''
 
 EXTRA_CSS = '''html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 *,*::before,*::after{box-sizing:border-box}
 img{max-width:100%;height:auto}
-.fld{min-height:52px;padding:0 14px;background:#0B0B0C;border:1px solid #3A3427;color:#EDE8DF;font-size:16px;font-family:inherit;border-radius:0;width:100%}
-.fld:focus{border-color:#C9A96E;outline:none}
+.fld{min-height:52px;padding:0 14px;background:#F4F4F2;border:1px solid #D2D2CD;color:#222222;font-size:16px;font-family:inherit;border-radius:0;width:100%}
+.fld:focus{border-color:#3F3F3F;outline:none}
 .pill{position:relative;display:inline-flex}
 .pill input{position:absolute;opacity:0;width:1px;height:1px}
-.pill span{min-height:44px;padding:0 14px;display:inline-flex;align-items:center;font-size:13px;border:1px solid #3A3427;color:#D6D1C8;cursor:pointer}
-.pill input:checked+span{background:#C9A96E;border-color:#C9A96E;color:#0B0B0C}
-.pill input:focus-visible+span{outline:2px solid #C9A96E;outline-offset:3px}
+.pill span{min-height:44px;padding:0 14px;display:inline-flex;align-items:center;font-size:13px;border:1px solid #D2D2CD;color:#3D3D3D;cursor:pointer}
+.pill input:checked+span{background:#3F3F3F;border-color:#3F3F3F;color:#F4F4F2}
+.pill input:focus-visible+span{outline:2px solid #3F3F3F;outline-offset:3px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}'''
 
 def head(title, desc, fname, helmet):
@@ -93,7 +93,7 @@ def head(title, desc, fname, helmet):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0B0B0C">
+<meta name="theme-color" content="#F4F4F2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {helmet.strip()}
@@ -141,7 +141,7 @@ var f=q.get('from');var h=document.getElementById('fs-source');if(h&&f&&/^[a-z0-
     js = (sticky_js + prefill_js if src == "Main.dc.html" else "") + (menu_js if 'id="fs-menu"' in body else "")
     script = "<script>\n" + js + "</script>\n" if js else ""
     if src == "Main.dc.html":
-        helmet = '<link rel="preload" as="image" href="/hero.jpg">\n' + helmet
+        helmet = ('<link rel="preload" as="image" href="/img/face-line.png">\n' if os.path.exists(os.path.join(OUT, "img", "face-line.png")) else '') + helmet
     if src == "Branding.dc.html":
         body, n = re.subn(r'<section id="works-latest".*?</section>', '<!--WORKS_LATEST-->', body, flags=re.S)
         assert n == 1, "works-latest"
@@ -181,12 +181,12 @@ var f=q.get('from');var h=document.getElementById('fs-source');if(h&&f&&/^[a-z0-
 
 # thanks page, reusing the privacy page's head styles
 thanks_helmet = re.search(r"<helmet>(.*?)</helmet>", open(os.path.join(SRC, "Privacy.dc.html"), encoding="utf-8").read(), re.S).group(1)
-thanks = head("送信完了 | FUMIYA STYLE", "お問い合わせを受け付けました。", "thanks.html", thanks_helmet).replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"') + '''<main style="min-height: 100vh; background: #0B0B0C; color: #EDE8DF; font-family: 'Noto Sans JP', sans-serif; display: flex; align-items: center; justify-content: center; padding: 48px 24px; text-align: center">
+thanks = head("送信完了 | FUMIYA STYLE", "お問い合わせを受け付けました。", "thanks.html", thanks_helmet).replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"') + '''<main style="min-height: 100vh; background: #F4F4F2; color: #222222; font-family: 'Noto Sans JP', sans-serif; display: flex; align-items: center; justify-content: center; padding: 48px 24px; text-align: center">
 <div style="max-width: 560px; display: flex; flex-direction: column; align-items: center; gap: 20px">
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">THANK YOU</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #3F3F3F">THANK YOU</p>
 <h1 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 24px; line-height: 1.8; letter-spacing: 0.12em">ご相談ありがとうございます。</h1>
-<p style="margin: 0; font-size: 16px; line-height: 1.9; color: #D6D1C8">内容を確認のうえ、佐野よりご連絡いたします。</p>
-<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #C9A96E; color: #C9A96E; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
+<p style="margin: 0; font-size: 16px; line-height: 1.9; color: #3D3D3D">内容を確認のうえ、佐野よりご連絡いたします。</p>
+<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #3F3F3F; color: #3F3F3F; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
 </div>
 </main>
 </body>
@@ -198,11 +198,11 @@ if SITE:
     robots += f"\nSitemap: {SITE}/sitemap.xml\n"
 open(os.path.join(OUT, "robots.txt"), "w").write(robots)
 shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "hero.jpg"), os.path.join(OUT, "hero.jpg"))
-notfound = head("ページが見つかりません | FUMIYA STYLE", "お探しのページは見つかりませんでした。", "404.html", thanks_helmet).replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"') + '''<main style="min-height: 100vh; background: #0B0B0C; color: #EDE8DF; font-family: 'Noto Sans JP', sans-serif; display: flex; align-items: center; justify-content: center; padding: 48px 24px; text-align: center">
+notfound = head("ページが見つかりません | FUMIYA STYLE", "お探しのページは見つかりませんでした。", "404.html", thanks_helmet).replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"') + '''<main style="min-height: 100vh; background: #F4F4F2; color: #222222; font-family: 'Noto Sans JP', sans-serif; display: flex; align-items: center; justify-content: center; padding: 48px 24px; text-align: center">
 <div style="max-width: 560px; display: flex; flex-direction: column; align-items: center; gap: 20px">
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #C9A96E">404 NOT FOUND</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #3F3F3F">404 NOT FOUND</p>
 <h1 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 22px; line-height: 1.8; letter-spacing: 0.1em">お探しのページは見つかりませんでした。</h1>
-<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #C9A96E; color: #C9A96E; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
+<a href="/" style="min-height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #3F3F3F; color: #3F3F3F; text-decoration: none; letter-spacing: 0.2em; font-size: 14px">トップページへ戻る</a>
 </div>
 </main>
 </body>

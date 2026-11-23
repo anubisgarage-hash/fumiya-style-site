@@ -68,60 +68,60 @@ const placeholder = (label) => `<div class="wk-ph" role="img" aria-label="${esc(
 
 const WORKS_CSS = `
 .wk-wrap{max-width:1000px;margin:0 auto;padding:0 20px}
-.wk-crumb{max-width:1000px;margin:0 auto;padding:20px 20px 0;font-size:12px;color:#8F8A82}
+.wk-crumb{max-width:1000px;margin:0 auto;padding:20px 20px 0;font-size:12px;color:#767676}
 .wk-crumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 8px}
-.wk-crumb li+li::before{content:"›";margin-right:8px;color:#5A5040}
-.wk-crumb a{color:#A39E95;text-decoration:none}
-.wk-lbl{margin:0;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.4em;color:#C9A96E}
-.wk-h1{margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(22px,5.6vw,34px);line-height:1.6;letter-spacing:.06em;color:#F3EEE5;overflow-wrap:anywhere}
-.wk-h2{margin:0 0 16px;font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(19px,4.8vw,24px);line-height:1.6;letter-spacing:.08em;color:#EDE8DF;padding-top:20px;border-top:1px solid #2A2722}
-.wk-body p{margin:0 0 1.2em;font-size:16px;line-height:2;color:#D6D1C8}
-.wk-ul{margin:0 0 1.2em;padding-left:1.2em;color:#D6D1C8;line-height:2}
+.wk-crumb li+li::before{content:"›";margin-right:8px;color:#BDBDB8}
+.wk-crumb a{color:#6B6B6B;text-decoration:none}
+.wk-lbl{margin:0;font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.4em;color:#3F3F3F}
+.wk-h1{margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(22px,5.6vw,34px);line-height:1.6;letter-spacing:.06em;color:#222222;overflow-wrap:anywhere}
+.wk-h2{margin:0 0 16px;font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(19px,4.8vw,24px);line-height:1.6;letter-spacing:.08em;color:#222222;padding-top:20px;border-top:1px solid #DEDED9}
+.wk-body p{margin:0 0 1.2em;font-size:16px;line-height:2;color:#3D3D3D}
+.wk-ul{margin:0 0 1.2em;padding-left:1.2em;color:#3D3D3D;line-height:2}
 .wk-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
-.wk-chip{padding:3px 10px;border:1px solid #3A3427;font-size:12px;color:#B8A47A}
-.wk-badge{padding:3px 10px;background:#2A2416;color:#E2C994;font-size:12px}
-.wk-meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#A39E95}
+.wk-chip{padding:3px 10px;border:1px solid #D2D2CD;font-size:12px;color:#555555}
+.wk-badge{padding:3px 10px;background:#E8E8E4;color:#222222;font-size:12px}
+.wk-meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#6B6B6B}
 .wk-sec{margin:56px 0}
 .wk-fig{margin:0}
-.wk-fig figcaption{margin-top:8px;font-size:13px;color:#8F8A82}
-.wk-zoom{display:block;width:100%;padding:0;border:0;background:#111112;cursor:zoom-in}
+.wk-fig figcaption{margin-top:8px;font-size:13px;color:#767676}
+.wk-zoom{display:block;width:100%;padding:0;border:0;background:#FFFFFF;cursor:zoom-in}
 .wk-zoom img{display:block;width:100%;height:auto}
 .wk-ba{display:grid;grid-template-columns:1fr;gap:20px}
 @media (min-width:768px){.wk-ba.two{grid-template-columns:1fr 1fr}}
 .wk-ba-item{margin:0}
-.wk-ba-lbl{display:inline-block;margin-bottom:8px;padding:2px 12px;font-family:'Cormorant Garamond',serif;font-size:15px;letter-spacing:.3em;border:1px solid #C9A96E;color:#C9A96E}
-.wk-ba-lbl.after{background:#C9A96E;color:#0B0B0C}
-.wk-ba-box{aspect-ratio:4/3;background:#111112;border:1px solid #2A2722;display:flex;align-items:center;justify-content:center}
+.wk-ba-lbl{display:inline-block;margin-bottom:8px;padding:2px 12px;font-family:'Cormorant Garamond',serif;font-size:15px;letter-spacing:.3em;border:1px solid #3F3F3F;color:#3F3F3F}
+.wk-ba-lbl.after{background:#3F3F3F;color:#F4F4F2}
+.wk-ba-box{aspect-ratio:4/3;background:#FFFFFF;border:1px solid #DEDED9;display:flex;align-items:center;justify-content:center}
 .wk-ba-box .wk-zoom{height:100%;background:transparent}
 .wk-ba-box img{width:100%;height:100%;object-fit:contain}
 .wk-diagram-tools{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
-.wk-btn{min-height:44px;padding:0 16px;display:inline-flex;align-items:center;gap:8px;border:1px solid #C9A96E;background:transparent;color:#C9A96E;font-size:14px;font-family:inherit;text-decoration:none;cursor:pointer}
-.wk-cta{display:flex;justify-content:center;align-items:center;min-height:56px;width:100%;max-width:440px;padding:10px 16px;background:#C9A96E;color:#0B0B0C!important;font-size:15px;font-weight:500;letter-spacing:.04em;line-height:1.5;text-decoration:none;text-align:center}
-.wk-roles dt{font-size:13px;color:#8F8A82;margin:12px 0 6px}
-.wk-roles dd{margin:0;color:#D6D1C8}
+.wk-btn{min-height:44px;padding:0 16px;display:inline-flex;align-items:center;gap:8px;border:1px solid #3F3F3F;background:transparent;color:#3F3F3F;font-size:14px;font-family:inherit;text-decoration:none;cursor:pointer}
+.wk-cta{display:flex;justify-content:center;align-items:center;min-height:56px;width:100%;max-width:440px;padding:10px 16px;background:#3F3F3F;color:#F4F4F2!important;font-size:15px;font-weight:500;letter-spacing:.04em;line-height:1.5;text-decoration:none;text-align:center}
+.wk-roles dt{font-size:13px;color:#767676;margin:12px 0 6px}
+.wk-roles dd{margin:0;color:#3D3D3D}
 .wk-grid{display:grid;grid-template-columns:1fr;gap:16px}
 @media (min-width:640px){.wk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1000px){.wk-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.wk-card{display:flex;flex-direction:column;background:#141414;border:1px solid #2A2722;color:#EDE8DF;text-decoration:none;min-width:0}
-.wk-card:hover{border-color:#5A5040}
-.wk-thumb{aspect-ratio:3/2;background:#1A1916;overflow:hidden}
+.wk-card{display:flex;flex-direction:column;background:#FFFFFF;border:1px solid #DEDED9;color:#222222;text-decoration:none;min-width:0}
+.wk-card:hover{border-color:#BDBDB8}
+.wk-thumb{aspect-ratio:3/2;background:#E8E8E4;overflow:hidden}
 .wk-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.wk-thumb.none{display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;letter-spacing:.3em;color:#5A5040;font-size:14px}
+.wk-thumb.none{display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;letter-spacing:.3em;color:#BDBDB8;font-size:14px}
 .wk-card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px}
-.wk-card-title{margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:17px;line-height:1.7;letter-spacing:.04em;color:#F3EEE5;overflow-wrap:anywhere}
-.wk-card-sum{margin:0;font-size:14px;line-height:1.8;color:#A39E95;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.wk-card-date{font-size:12px;color:#8F8A82}
+.wk-card-title{margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:17px;line-height:1.7;letter-spacing:.04em;color:#222222;overflow-wrap:anywhere}
+.wk-card-sum{margin:0;font-size:14px;line-height:1.8;color:#6B6B6B;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.wk-card-date{font-size:12px;color:#767676}
 .wk-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.wk-filter a{min-height:40px;padding:0 14px;display:inline-flex;align-items:center;border:1px solid #3A3427;color:#D6D1C8;font-size:13px;text-decoration:none}
-.wk-filter a[aria-current="page"]{background:#C9A96E;border-color:#C9A96E;color:#0B0B0C}
+.wk-filter a{min-height:40px;padding:0 14px;display:inline-flex;align-items:center;border:1px solid #D2D2CD;color:#3D3D3D;font-size:13px;text-decoration:none}
+.wk-filter a[aria-current="page"]{background:#3F3F3F;border-color:#3F3F3F;color:#F4F4F2}
 .wk-pager{display:flex;justify-content:space-between;gap:12px;margin-top:32px}
-.wk-ph{aspect-ratio:3/2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px dashed #5A5040;background:#141414;color:#8C7B57;font-size:14px;text-align:center}
-.wk-ph small{font-size:11px;color:#6E6A63}
+.wk-ph{aspect-ratio:3/2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px dashed #BDBDB8;background:#FFFFFF;color:#777777;font-size:14px;text-align:center}
+.wk-ph small{font-size:11px;color:#8A8A8A}
 .wk-preview-bar{position:sticky;top:0;z-index:60;background:#7A2E1E;color:#fff;text-align:center;font-size:13px;padding:8px 12px}
 .wk-lb{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.94);display:flex;flex-direction:column}
 .wk-lb[hidden]{display:none}
 .wk-lb-bar{display:flex;justify-content:flex-end;gap:8px;padding:10px 12px;flex:none}
-.wk-lb-bar button,.wk-lb-bar a{min-width:44px;min-height:44px;padding:0 12px;border:1px solid #5A5040;background:#111;color:#E2C994;font-size:15px;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}
+.wk-lb-bar button,.wk-lb-bar a{min-width:44px;min-height:44px;padding:0 12px;border:1px solid #555;background:#111;color:#F4F4F2;font-size:15px;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}
 .wk-lb-view{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;align-items:flex-start;justify-content:center;touch-action:pan-x pan-y pinch-zoom}
 .wk-lb-view img{display:block;max-width:none;margin:auto}
 `;
@@ -158,7 +158,7 @@ ${robots ? `<meta name="robots" content="${robots}">\n` : ""}${canonical && !pre
 <meta property="og:description" content="${esc(desc)}">
 ${canonical ? `<meta property="og:url" content="${esc(canonical)}">\n` : ""}<meta property="og:image" content="${esc(og)}">
 <meta name="twitter:card" content="summary_large_image">
-`}<meta name="theme-color" content="#0B0B0C">
+`}<meta name="theme-color" content="#F4F4F2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 ${c.fonts}
@@ -212,11 +212,11 @@ export function publicList(idx, now = Date.now()) {
 // ---- /branding/ (existing page + latest works) ----
 export function renderBranding(idx) {
   const latest = publicList(idx).slice(0, 3);
-  const section = `<section id="works" style="padding: 88px 24px; background: #111112; border-top: 1px solid #23211D">
+  const section = `<section id="works" style="padding: 88px 24px; background: #FFFFFF; border-top: 1px solid #E2E2DE">
 <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
 <p class="lbl">WORKS &amp; CASE STUDIES</p>
 <h2 class="h2">参考実例</h2>
-<p style="margin: 0; color: #A39E95; line-height: 1.9">企業の背景や想いを理解し、全体設計から実行まで伴走した事例を紹介しています。</p>
+<p style="margin: 0; color: #6B6B6B; line-height: 1.9">企業の背景や想いを理解し、全体設計から実行まで伴走した事例を紹介しています。</p>
 ${latest.length ? `<div class="wk-grid three">${latest.map((s) => card(s)).join("\n")}</div>` : ""}
 <a class="wk-btn" href="/branding/works/" style="align-self: flex-start">参考実例を見る <span aria-hidden="true">→</span></a>
 </div>
@@ -245,11 +245,11 @@ export function renderList(req, idx, { category, page: pageNo }) {
 <section style="padding: 48px 0 32px"><div class="wk-wrap" style="display:flex;flex-direction:column;gap:14px">
 <p class="wk-lbl">WORKS &amp; CASE STUDIES</p>
 <h1 class="wk-h1" style="font-size:clamp(28px,7vw,44px)">参考実例</h1>
-<p style="margin:0;color:#A39E95;line-height:1.9">企業や経営者の課題を聞き、誰に何を伝えるかを整理し、ホームページやSNSの全体設計から実行まで伴走した事例です。</p>
+<p style="margin:0;color:#6B6B6B;line-height:1.9">企業や経営者の課題を聞き、誰に何を伝えるかを整理し、ホームページやSNSの全体設計から実行まで伴走した事例です。</p>
 ${usedCats.length > 1 ? `<nav aria-label="分類で絞り込む"><ul class="wk-filter"><li><a href="/branding/works/"${!category ? ' aria-current="page"' : ""}>すべて</a></li>${usedCats.map((c) => `<li><a href="${qs(1, c.id)}"${category === c.id ? ' aria-current="page"' : ""}>${esc(c.name)}</a></li>`).join("")}</ul></nav>` : ""}
 </div></section>
 <section style="padding: 0 0 96px"><div class="wk-wrap">
-${items.length ? `<div class="wk-grid three">${items.map((s) => card(s, { headingLevel: 2 })).join("\n")}</div>` : `<p style="padding:48px 0;color:#A39E95;text-align:center">参考実例は準備中です。</p>`}
+${items.length ? `<div class="wk-grid three">${items.map((s) => card(s, { headingLevel: 2 })).join("\n")}</div>` : `<p style="padding:48px 0;color:#6B6B6B;text-align:center">参考実例は準備中です。</p>`}
 ${pages > 1 ? `<nav class="wk-pager" aria-label="ページ送り">${pageNo > 1 ? `<a class="wk-btn" href="${qs(pageNo - 1)}">← 新しい実例</a>` : "<span></span>"}${pageNo < pages ? `<a class="wk-btn" href="${qs(pageNo + 1)}">以前の実例 →</a>` : ""}</nav>` : ""}
 <div style="margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
 <p style="margin:0;font-family:'Shippori Mincho',serif;font-size:19px;line-height:1.8;letter-spacing:.08em">ホームページやSNSの活用について、<br>まずは会社のことを聞かせてください。</p>
