@@ -15,7 +15,7 @@ pages = {
         "学生と企業のマッチング、採用支援、企業間ネットワーク構築。人と企業の可能性を、確かな関係でつなぐ。"),
     "System.dc.html": ("system.html", "SYSTEM DEVELOPMENT | FUMIYA STYLE",
         "業務に合わせたシステム開発と業務効率化。補助金・助成金を活用した導入までご相談いただけます。"),
-    "People.dc.html": ("people.html", "MY PEOPLE. | FUMIYA STYLE",
+    "People.dc.html": ("people.html", "OUR PARTNERS | FUMIYA STYLE",
         "業界も、国籍も、肩書きも違う。FUMIYA STYLEが信頼する仲間たち。"),
     "Profile.dc.html": ("profile/index.html", "佐野史弥（さの ふみや）｜FUMIYA STYLE",
         "佐野史弥（さの ふみや）のプロフィール。RAF INDUSTRIES 株式会社 代表取締役、ANUBIS NAGOYA 代表。トヨタディーラー、トヨタ自動車の開発部門を経て独立し、製造業などの企業ブランディング・広報支援も行う。"),
