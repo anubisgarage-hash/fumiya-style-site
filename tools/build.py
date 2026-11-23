@@ -141,7 +141,7 @@ var f=q.get('from');var h=document.getElementById('fs-source');if(h&&f&&/^[a-z0-
     js = (sticky_js + prefill_js if src == "Main.dc.html" else "") + (menu_js if 'id="fs-menu"' in body else "")
     script = "<script>\n" + js + "</script>\n" if js else ""
     if src == "Main.dc.html":
-        helmet = ('<link rel="preload" as="image" href="/img/face-line.png">\n' if os.path.exists(os.path.join(OUT, "img", "face-line.png")) else '') + helmet
+        helmet = ('<link rel="preload" as="image" href="/img/face-line.webp">\n' if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "face-line.webp")) else '') + helmet
     if src == "Branding.dc.html":
         body, n = re.subn(r'<section id="works-latest".*?</section>', '<!--WORKS_LATEST-->', body, flags=re.S)
         assert n == 1, "works-latest"
@@ -198,6 +198,8 @@ if SITE:
     robots += f"\nSitemap: {SITE}/sitemap.xml\n"
 open(os.path.join(OUT, "robots.txt"), "w").write(robots)
 shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "hero.jpg"), os.path.join(OUT, "hero.jpg"))
+os.makedirs(os.path.join(OUT, "img"), exist_ok=True)
+shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "face-line.webp"), os.path.join(OUT, "img", "face-line.webp"))
 notfound = head("ページが見つかりません | FUMIYA STYLE", "お探しのページは見つかりませんでした。", "404.html", thanks_helmet).replace('<meta name="theme-color"', '<meta name="robots" content="noindex">\n<meta name="theme-color"') + '''<main style="min-height: 100vh; background: #F4F4F2; color: #222222; font-family: 'Noto Sans JP', sans-serif; display: flex; align-items: center; justify-content: center; padding: 48px 24px; text-align: center">
 <div style="max-width: 560px; display: flex; flex-direction: column; align-items: center; gap: 20px">
 <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.5em; color: #3F3F3F">404 NOT FOUND</p>
